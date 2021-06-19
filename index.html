@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="body">
+    <section class="main-section">
+        <div class="header-section">
+            <h1>Color Changer</h1>
+        </div>
+        <div class="button-color">
+            <button class="button">Click</button>
+        </div>
+        <h1 class="rgbText"> </h1>
+    </section>
+    <script>
+        let button = document.querySelector('button');
+        let body = document.querySelector('body')
+        let h1 = document.getElementsByTagName('h1')[1];
+
+        function newColor(){
+            let val1 = Math.floor((Math.random() * 255)+1)
+            let val2 = Math.floor((Math.random() * 255)+1)
+            let val3 = Math.floor((Math.random() * 255)+1)
+            return `rgb(${val1},${val2},${val3})`
+        }
+        button.addEventListener('click',function(){
+            body.style.backgroundColor = newColor();
+            if(h1.innerHTML !== ''){
+                h1.innerHTML =  newColor()
+                h1.style.border = '1px solid black';
+            }
+            console.log(newColor())
+        })
+    </script>
+</body>
+</html>

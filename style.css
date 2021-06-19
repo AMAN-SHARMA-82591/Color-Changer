@@ -1,0 +1,58 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+.main-section{
+    text-align:center;
+    padding:150px 0px 0px 0px;
+
+}
+.header-section h1{
+    font-size:50px;
+    color:black;
+}
+.button-color button{
+    margin:50px 0px 0px 0px;
+    padding:15px 60px;
+    font-size:30px;
+    letter-spacing:2px;
+    border:1px solid black;
+    background:white;
+    color:black;
+    position:relative;
+    font-weight:bold;
+    z-index:1;
+    overflow:hidden;
+    transition:color 0.5s ease;
+}
+.button-color button:hover{
+    color:white;
+    box-shadow: 1px 1px 5px grey;
+}
+.button-color button::after{
+    content:'';
+    background-color:black;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    transition:transform 0.4s ease;
+    z-index:-1;
+    transform:scaleX(0);
+}
+.button-color button:hover::after{
+    background:black;
+    transform:scaleX(1);
+
+}
+.rgbText{
+    
+    width:320px;
+    margin:50px auto 0px auto;
+    font-size:28px;
+    letter-spacing:1.5px;
+    padding:10px 0px;
+}
